@@ -11,3 +11,6 @@ email: jhonnystene@protonmail.com
 discord: jhonnystene#7214  
 matrix: @johnny-stene:matrix.org  
 sms: +1 (780) 504-9202
+
+## other pages
+[stream of consciousness](https://jhonnystene.github.io/stream.html)
