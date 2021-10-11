@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>stene.xyz</title>
+		<link href="/style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body style="height:100vh">
+		<div class="content">
+			<h1 class="header"><i>operating system development</i></h1>
+			<h3 class="subheader"><i>multitasking</i></h3>
+			<p>
+				<b>context switching</b><br>
+				Multitasking in operating systems is done by changing which process is currently active, which allows multiple processes to run on one CPU core.
+				Changing between processes is called a <i>context switch</i>, and it is very easy (although somewhat tedious on some platforms) to 
+				implement. Context switching is used on both cooperative and preemptive multitasking, and can be broken down into this basic formula:<br>
+				<ol type="1">
+					<li>Push all registers onto the stack</li>
+					<li>Save the stack pointer and instruction pointer somewhere</li>
+					<li>Load the stack pointer and instruction pointer of another process</li>
+					<li>Pop all registers from the stack</li>
+					<li>Continue execution from the new instruction pointer</li>
+				</ol><br>
+				The most basic form of multitasking is "in-order" multitasking, where every process runs in the order they are spawned in, and no process takes
+				priority over another. This is very simple to implement, and a pseudocode example is available <a href="/resources/osdev/multitasking/in_order.txt">here.</a><br><br>
+
+				<b>cooperative multitasking</b><br>
+				Cooperative multitasking is very simple as well (in fact, it needs no more code on the kernel side) but it does require cooperation
+				from the applications running on the system (hence the name). Whenever an application finishes what it needs to do, it has to call switch_processes()
+				to tell the kernel that it is done.<br><br>
+
+				<b>preemptive multitasking</b><br>
+				Preemptive multitasking has many benefits over cooperative multitasking, and is not much harder to implement. The main difference between the two is
+				that preemptive multitasking has switch_processes() called by the kernel, rather than the application, which makes it a bit easier for application developers.
+				However, preemptive multitasking also has the benefit that one bad process doesn't hang the whole system, and it allows for certain applications to take priority 
+				(in more complex implementations). Preemptive multitasking is implemented by having an interrupt fire at a certain predefined frequency (10ms is fine for DIY OSes)
+				that called switch_processes(). The way interrupts need to be registered differs between hardware platforms, so it won't be touched on here.
+			</p>
+		</div>
+	</body>
+</html>
+

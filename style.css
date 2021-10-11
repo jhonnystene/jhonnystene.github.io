@@ -32,6 +32,13 @@ body {
 	max-width: 66vw;
 }
 
+.code {
+	color: white;
+	background-color: #111111;
+	border: 1px solid #111111;
+	border-radius: 10px;;
+}
+
 a, a:hover, a:active, a:visited {
 	font-weight: 600;
 	color: #0238fa;

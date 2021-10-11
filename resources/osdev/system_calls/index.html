@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>stene.xyz</title>
+		<link href="/style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body style="height:100vh">
+		<div class="content">
+			<h1 class="header"><i>operating system development</i></h1>
+			<h3 class="subheader"><i>system calls</i></h3>
+			<p>
+                System calls are surprisingly simple to implement, if you do it correctly. I've been used to the <a href="http://mikeos.sourceforge.net/">MikeOS</a>
+                method, which involves having jmp statements to your functions at a predefined point in your operating system. This is actually a pretty bad way
+                of doing it in most cases, though. The proper way is to register an interrupt that handles system calls, and to store a structure
+                containing the arguments to your system call. There is pseudocode available <a href="/resources/osdev/system_calls/pseudocode.txt">here</a>.
+            </p>
+		</div>
+	</body>
+</html>
+

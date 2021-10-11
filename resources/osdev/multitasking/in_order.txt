@@ -1,0 +1,55 @@
+structure application_data = { // PID, stack pointer, and instruction pointer.
+    int pid;
+    int* stack_pointer;
+    int* instruction_pointer;
+};
+
+const int PROCESS_COUNT = 32; // How many processes should we be able to have?
+application_data processes[PROCESS_COUNT]; // List of processes.
+int current_process = 0; // Which process is currently running.
+
+// Adds a process to the process list.
+// It is up to the user to make sure there is enough zeroes in the stack pointer for all of the registers.
+function spawn_process(int pid, int* stack_pointer, int* instruction_pointer) {
+    application_data process_data;
+    process_data.pid = pid;
+    process_data.stack_pointer = stack_pointer;
+    process_data.instruction_pointer = instruction_pointer;
+    processes.add(process_data);
+}
+
+// Removes whatever process has a certain PID.
+function kill_process(int pid) {
+    for(process in processes) {
+        if(process.pid == pid) processes.remove(process);
+    }
+}
+
+function save_state() { // Push all registers onto the stack.
+    asm("push r1");
+    asm("push r2");
+    asm("push r3");
+    asm("push r4");
+    asm("push r5");
+}
+
+function restore_state() { // Pop all registers from the stack.
+    asm("pop r1");
+    asm("pop r2");
+    asm("pop r3");
+    asm("pop r4");
+    asm("pop r5");
+}
+
+function switch_processes() { // There should be a system call to call this function if you're using cooperative multitasking
+    save_state(); // Save the state of the registers.
+
+    // Switch to the next process in the lineup.
+    // Note that this doesn't check for empty processes.
+    current_process ++;
+    if(current_process >= PROCESS_COUNT) current_process = 0;
+
+    asm("mov sp, " . processes[current_process].stack_pointer); // Change to the new process' stack pointer.
+    asm("mov pc, " . processes[current_process].instruction_pointer); // Change to the new process' instruction pointer.
+    restore_state(); // Restore the registers from the old process.
+}

@@ -1,0 +1,31 @@
+// This assumes that the system is configured to call handle_system_call() when IRQ 0x69 (nice) fires.
+
+structure system_call_arguments = {
+    int type;
+    int argument1;
+    int argument2;
+}
+
+function do_system_call(system_call_arguments args) {
+    asm("push " . &args);
+    asm("int 0x69");
+}
+
+function draw_pixel(int x, int y) {
+    system_call_arguments args;
+    args.type = 0;
+    args.argument1 = x;
+    args.argument2 = y;
+}
+
+// Above code should be in a self-contained header inside applications
+
+// Function arguments are popped from the stack IIRC
+function handle_system_call(system_call_arguments *args) {
+    system_call_arguments arguments = args[0];
+    if(arguments.type == 0) { // Draw a pixel on the screen
+        int x = arguments.argument1;
+        int y = arguments.argument2;
+        // The rest isn't covered here because it isn't important for this
+    }
+}
