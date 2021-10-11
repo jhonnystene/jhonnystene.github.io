@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>stene.xyz</title>
+		<link href="/style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body style="height:100vh">
+		<div class="content">
+			<h1 class="header"><i>blog</i></h1>
+			<h3 class="subheader"><i>The Future of arcticOS</i></h3>
+			<p>
+				<b>The Problem</b><br>
+				The development of arcticOS has been a bit rocky, to say the least. Many of the problems I've had in development have been due to my own cockiness - I would
+				think of an idea, and even if I have no idea what is involved in making it, I would always assume I can do it. This has caused me to make a number of mistakes
+				and restart development a number of times - if I hadn't done that, I would be taking preorders right now for the first batch of phones.<br><br>
+
+				<b>The Solution</b><br>
+				I want to see this project finished and in the hands of people. I've done a lot of thinking recently about what the best course of action is to make that happen,
+				and I've come to the conclusion that the original candybar design is the only way it will be ready in any sort of reasonable timeframe. I will be changing the
+				design slightly, but I will not be doing anything if I don't know how. The biggest changes are switching to a Quectel modem and the RP2040 chip - which will
+				bring better carrier compatibility and improved performance, respectively. I'll also be adding a few extra features here and there, like a flashlight and a
+				directional pad for movement.<br><br>
+
+				<b>What about the QWERTY E-ink?</b><br>
+				If the candybar phone does well enough to fund development of the E-ink device, I'll work on that next. My original plan was to use a Raspberry Pi Compute
+				Module to run the E-ink device - I played around with using Atmel chips but they're just too slow to work properly. The RP2040 chip should actually be able
+				to run the screen (and the additional RAM required) without any problems - so ideally I'll use that and have the two phones use the same operating system.
+				<br><br>
+
+				<b>What about the current arcticOS codebase?</b><br> 
+				I had planned to rewrite the current codebase anyways. In hindsight, Python was an awful choice - it's slow and drains the battery to quickly. The current
+				codebase will likely be abandoned and the repo will be moved.<br><br>
+
+				<b>Where are you at right now?</b><br>
+				Luckily, I'm not starting completely from scratch. A lot of the old design is still usable on the new one - I can have a working (and much, much faster)
+				EVT just by soldering a Raspberry Pi Pico on one of the old prototypes. I'm already working on the rewrite of arcticOS, and should have it booting on real
+				hardware again in the coming days. I hope to share my progress with you all soon.<br><br>
+
+				<b>How can I help?</b><br>
+				One of the best ways to help is to email me suggestions - tell me what you've liked and hated about the dumbphones/featurephones you've owned, and what you'd
+				like to see put into my phone. I can be reached at <a href="mailto:johnny@stene.xyz">johnny@stene.xyz</a><br><br>
+				
+				You can also help by donating - this goes towards building prototypes and buying the tools nessecary to build the phones. My PayPal is at <a href="https://paypal.me/jhonnystene">paypal.me/jhonnystene</a>
+			</p>
+		</div>
+	</body>
+</html>
+

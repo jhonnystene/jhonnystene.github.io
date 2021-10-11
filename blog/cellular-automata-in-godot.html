@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>stene.xyz</title>
+		<link href="/style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body style="height:100vh">
+		<div class="content">
+			<h1 class="header"><i>blog</i></h1>
+			<h3 class="subheader"><i>cellular automata in godot</i></h3>
+			<p>
+				Godot was not made for cellular automata. There are two immediately obvious methods to handle the cellular automata problem in Godot, and they both have abysmal performance.<br><br>
+				
+				The first (and most naiive) approach, is to have individual Nodes (likely based on ColorRects) that all interact with each other that way. This has a number 
+				of issues. First, you need to find some way to have each node move and interact - whether you're using regular collision objects, or some special thing,
+				it will be fairly difficult to have everything play nicely. The second problem is the massive performance issues with Nodes - even small amounts around 256^2
+				Nodes causes awful performance.<br><br>
+				
+				The second approach is to have a 2D array containing your world data, and using that to generate an ImageTexture. This is fairly similar to other cellular
+				automata implementations I've seen, but with by default with Godot, this performs very poorly. As far as I can tell, there's no way to copy large chunks of 
+				data into an image - generating an image from scratch has to be done by individual set_pixel() calls and is incredibly slow. There are a few methods that
+				could greatly increase performance here, but by far the simplest is to only repaint changed pixels. I handled this by using an array (although I later switched
+				to a Dictionary) of changed pixels, and updating that with Vector2 position data whenever my SetPixel function was called.<br><br> 
+				
+				This still leaves more to be desired in terms of performance, though. An obvious step is to just turn down the render resolution. There are a few ways to
+				handle this, but my method of choice was using the Scale of my Sprite in the editor, and scaling the world down based on that. The only real annoyance is you
+				need to divide any viewport calculations by the Scale value.<br><br>
+
+				You can try out my implementation <a href="/demos/sandbox">on the demo page</a> or download it on <a href="https://stenexyz.itch.io/sandbox">the itch.io page</a>
+			</p>
+		</div>
+	</body>
+</html>
+
