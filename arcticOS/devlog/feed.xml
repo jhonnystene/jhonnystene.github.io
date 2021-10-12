@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>arcticOS Devlog</title>
+  <link>https://www.stene.xyz/arcticOS</link>
+  <description>Development log for arcticOS.</description>
+  <item>
+    <title>New arcticOS Codebase Released</title>
+    <link>https://www.stene.xyz/arcticOS/devlog/new-codebase-released.html</link>
+    <description>The new codebase for arcticOS has been released.</description>
+  </item>
+  <item>
+    <title>The Future of arcticOS</title>
+    <link>https://www.stene.xyz/arcticOS/devlog/the-future-of-arcticos.html</link>
+    <description>A post outlining the future of arcticOS.</description>
+  </item>
+</channel>
+
+</rss> 

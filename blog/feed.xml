@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>stene.xyz blog</title>
+  <link>https://www.stene.xyz/blog</link>
+  <description>Things I find interesting.</description>
+  <item>
+    <title>Cellular Automata in Godot</title>
+    <link>https://www.stene.xyz/blog/cellular-automata-in-godot.html</link>
+    <description>Challenges I faced getting cellular automata working in Godot.</description>
+  </item>
+</channel>
+
+</rss> 
