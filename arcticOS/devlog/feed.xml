@@ -6,6 +6,11 @@
   <link>https://www.stene.xyz/arcticOS</link>
   <description>Development log for arcticOS.</description>
   <item>
+    <title>System Calls Now Implemented</title>
+    <link>https://www.stene.xyz/arcticOS/devlog/syscalls-now-implemented.html</link>
+    <description>Syscalls are now implemented - here's what it means for arcticOS</description>
+  </item>
+  <item>
     <title>New arcticOS Codebase Released</title>
     <link>https://www.stene.xyz/arcticOS/devlog/new-codebase-released.html</link>
     <description>The new codebase for arcticOS has been released.</description>

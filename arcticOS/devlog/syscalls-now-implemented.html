@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>stene.xyz</title>
+		<link href="/style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body style="height:100vh">
+		<div class="content">
+			<h1 class="header"><i>devlog</i></h1>
+			<h3 class="subheader"><i>System Calls Now Implemented</i></h3>
+			<p>
+				I've implemented system calls into arcticOS. It was really the obvious first step towards building a "proper" mobile operating system, and will actually allow me to continue updating phones for longer.<br><br>
+
+				<b>What are system calls?</b><br>
+				System calls are a way for applications to "talk" to the operating system - they add lots of modularity and make the development process much easier. 
+				Essentially, without system calls, programs would need to either talk directly to the hardware (which *is* permitted on arcticOS, but is not usually the best solution) or they would need to know exactly where the relevant chunks of the OS live. 
+				With system calls, a program just needs to say "Hey operating system - I want to do (insert thing here)" and the OS will parse the data it is given to execute the command.
+
+				<b>How does this improve arcticOS?</b><br>
+				The most obvious benefit is it opens the door to potential third-party application support *without* recompiling the OS to add in every app. 
+				One less immediately apparent benefit is that it makes the OS much more modular - you'll be able to swap out different pieces and it should all just run. 
+				This modularity also brings about what is (in my eyes, anyway) a very important part of arcticOS - 
+				I could completely stop supporting one model of phone and spend (close to) zero time working on software for it, but continue to release useful updates for it regularly. 
+				The reason I can do this is because arcticOS's modularity means I can "swap out" the core of arcticOS for a newer version and spend very little time getting it to work. 
+				That means that even if I completely abandon dumbphones altogether, development I do for a smartphone, computer, etc... will still be somewhat relevant to the dumbphones and will continue to work. 
+				This of course doesn't mean I'm going to switch to zero-effort updates right after launch. As long as it is economically viable for me to design & manufacture dumbphones, they'll be getting proper updates. 
+				I'll be talking more about my general update plans in a future post.<br><br>
+
+				<b>How can I help?</b><br>
+				One of the best ways to help is to email me suggestions - tell me what you've liked and hated about the dumbphones/featurephones you've owned, and what you'd
+				like to see put into my phone. I can be reached at <a href="mailto:johnny@stene.xyz">johnny@stene.xyz</a><br><br>
+				
+				You can also help by donating - this goes towards building prototypes and buying the tools nessecary to build the phones. My PayPal is at <a href="https://paypal.me/jhonnystene">paypal.me/jhonnystene</a>
+			</p>
+		</div>
+	</body>
+</html>
+
