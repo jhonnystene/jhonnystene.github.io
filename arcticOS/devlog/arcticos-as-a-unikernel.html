@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>stene.xyz</title>
+		<link href="/style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body style="height:100vh">
+		<div class="content">
+			<h1 class="header"><i>devlog</i></h1>
+			<h3 class="subheader"><i>arcticOS as a Unikernel</i></h3>
+			<p>
+				<b>What is a Unikernel?</b><br>
+				A Unikernel is a type of operating system kernel where the user can choose what portions of the kernel and its libraries they want to use, and then they can generate
+				an image of their customized kernel. Think SUSE Studio (RIP) but for a kernel rather than a whole OS.<br><br>
+
+				<b>Why make arcticOS a Unikernel?</b><br>
+				Developing arcticOS and the hardware to run it has been far more expensive then I've thought, in both time and money. Making arcticOS a Unikernel will let me come up
+				with some sort of development environment that I can license out (arcticOS itself will stay the same license) to allow developers to program arcticOS apps, as well as
+				generate the specific Unikernel image for their needs. If it gains adoption, arcticOS itself could become the source of income I need to build the hardware it runs on.<br><br>
+
+				<b>What additional functionality will be put into arcticOS? What will be removed?</b><br>
+				arcticOS will at the very least need task switching and memory protection, but I'm also working on some built-in drivers for common hardware. This includes things like
+				flash memory, wireless, audio, etc... but it also includes chips other than the RP2040 (although it will likely be ARM-only for now) so hardware designers can use whatever 
+				suits their needs best. The distro of arcticOS that will ship on the phones will still look the same though - I've been working hard to make it so that any functionality that
+				doesn't belong in the base kernel gets moved over to a standard library or applications rather than just removed.<br><br>
+
+				<b>How can I help?</b><br>
+				One of the best ways to help is to email me suggestions - tell me what you've liked and hated about the dumbphones/featurephones you've owned, and what you'd
+				like to see put into my phone. I can be reached at <a href="mailto:johnny@stene.xyz">johnny@stene.xyz</a><br><br>
+				
+				You can also help by donating - this goes towards building prototypes and buying the tools nessecary to build the phones. My PayPal is at <a href="https://paypal.me/jhonnystene">paypal.me/jhonnystene</a>
+			</p>
+		</div>
+	</body>
+</html>
+

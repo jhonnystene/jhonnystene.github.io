@@ -6,6 +6,11 @@
   <link>https://www.stene.xyz/arcticOS</link>
   <description>Development log for arcticOS.</description>
   <item>
+    <title>arcticOS as a Unikernel</title>
+    <link>https://www.stene.xyz/arcticOS/devlog/arcticos-as-a-unikernel.html</link>
+    <description>A post about arcticOS's future as an embedded OS.</description>
+  </item>
+  <item>
     <title>System Calls Now Implemented</title>
     <link>https://www.stene.xyz/arcticOS/devlog/syscalls-now-implemented.html</link>
     <description>Syscalls are now implemented - here's what it means for arcticOS</description>

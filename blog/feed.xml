@@ -6,6 +6,11 @@
   <link>https://www.stene.xyz/blog</link>
   <description>Things I find interesting.</description>
   <item>
+    <title>Creating a CPU Instruction Set</title>
+    <link>https://www.stene.xyz/blog/creating-an-isa.html</link>
+    <description>I made a CPU instruction set.</description>
+  </item>
+  <item>
     <title>Cellular Automata in Godot</title>
     <link>https://www.stene.xyz/blog/cellular-automata-in-godot.html</link>
     <description>Challenges I faced getting cellular automata working in Godot.</description>

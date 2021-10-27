@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>stene.xyz</title>
+		<link href="/style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body style="height:100vh">
+		<div class="content">
+			<h1 class="header"><i>blog</i></h1>
+			<h3 class="subheader"><i>creating a cpu instruction set</i></h3>
+			<p>
+				I made my own instruction set. It's not great, and probably doesn't translate too good to hardware, but it does work in an <a href="/blog/cpu/emulator.c">emulator</a>.<br><br>
+
+				Designing an ISA is a fairly easy task (although implementing it in hardware is much harder) - all you really <i>need</i> is a few math instructions,
+				and some instructions for moving data around. Of course, this makes a fairly inefficient design - things that could be done by the ISA need to be done
+				in software, like stack operations and branching.<br><br>
+
+				For mine, I wanted it to be simple in design <i>and</i> use. Because of that, I've given it some math instructions, tons of branch instructions (including subroutines),
+				a bunch of memory instructions (including stack manipulation), and even functions to handle UART. It has a bit of a weird design. While the 8-bit data bus and 16-bit address bus
+				are fairly normal, there are no extended registers. Instead, there are special Address High and Address Low registers that store a memory address, so you can jump to
+				(or manipulate data in) an address of memory.<br><br>
+
+				I wrote an emulator to let me write software for this ISA (it's linked above). It will only compile & run on unices - if you're on Windows, you'll need to use WSL.
+				It has a pretty dumb bug in it - the stack pointer and program counter (called the instruction pointer) are actual C pointers, not values pointing somewhere in memory.
+				This is an easy bug to fix, and I'll start working on it once I get a proper assembler working (so far I've been assembling by hand).<br><br>
+
+				I hope to get some sort of basic operating system running on it - but first I need to find a way to save data to/from some sort of memory.
+			</p>
+		</div>
+	</body>
+</html>
+
