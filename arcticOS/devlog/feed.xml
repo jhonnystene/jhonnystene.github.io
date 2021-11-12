@@ -6,6 +6,11 @@
   <link>https://www.stene.xyz/arcticOS</link>
   <description>Development log for arcticOS.</description>
   <item>
+    <title>State of the arcticOS hardware project</title>
+    <link>https://www.stene.xyz/arcticOS/devlog/the-arcticos-hardware-project.html</link>
+    <description>A post outlining the future of the arcticOS hardware.</description>
+  </item>
+  <item>
     <title>arcticOS as a Unikernel</title>
     <link>https://www.stene.xyz/arcticOS/devlog/arcticos-as-a-unikernel.html</link>
     <description>A post about arcticOS's future as an embedded OS.</description>
